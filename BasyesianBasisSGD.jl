@@ -37,9 +37,9 @@ phi(x,y) = Float64[gaussian_basis(x, y, cx, cy) for (cx,cy) in basis_center]
 
 #シグモイド関数
 sigmoid(x) = 1./(1+exp(-x))
-#=
-#===== IRLS ======#
 
+#===== IRLS ======#
+#=
 function yR(w)
     s = sigmoid(X*w)
     return (s,diagm(s.*(1-s)))
