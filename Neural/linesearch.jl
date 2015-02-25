@@ -37,13 +37,13 @@ function line_search(model,X,Y,D,grads)
         new_E = crossentropy(model,X,Y,new_W)
         new_grads = gradline(model,X,Y,new_W)
 
-        armijoの条件
+        #armijoの条件
         if new_E > E + LS_C1*alpha*sum(map(sum,(map(.*,D,gradEs))))
             alpha *= LS_SCALE_DOWN
             continue
         end
 
-        wolfeの条件
+        #wolfeの条件
         if sum(map(sum,(map(.*,D,new_grads)))) <
                             LS_C2*sum(map(sum,(map(.*,D,gradEs))))
             alpha *= LS_SCALE_UP
