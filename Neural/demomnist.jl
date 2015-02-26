@@ -61,19 +61,20 @@ function demo_ann(numEpochs::Integer = 10,
     model = sgd(model, trainX, trainY, numEpochs, alpha, eta, batchSize)
 end
 
-function demo_lqnewton(numEpochs::Integer = 100,
-                      stdDev::Real = 0.05,
-                      H::Vector = [100])
-    trainX, trainY = Neural.preprocess(traindata())
+function demo_nesterov(numEpochs::Integer = 10,
+                  alpha::Real = 0.1,
+                  eta::Real = 0.5,
+                  batchSize::Integer = 32,
+                  stdDev::Real = 0.05,
+                  H::Vector = [100])
+    trainX, trainY = preprocess(traindata())
     D = size(trainX, 1)
-    K = size(trainY, 1)
-    model = LQNN([D, H, K], stdDev)
-    l_bfgsNN(model,
-             trainX,
-             trainY,
-             numEpochs)
-    return model
+    F = size(trainY, 1)
+    model = ANN([D, H, F], stdDev)
+    model = nesterov(model, trainX, trainY, numEpochs, alpha, eta, batchSize)
 end
+
+
 
 function test(model)
     testX, testY = Neural.preprocess(testdata())

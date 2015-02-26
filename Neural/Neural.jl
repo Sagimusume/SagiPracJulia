@@ -1,6 +1,6 @@
 module Neural
 
-    export Model, ANN, QNN, LQNN, quasi_newton_method, sgd, l_bfgsNN,
+    export Model, ANN, QNN, LQNN, quasi_newton_method, sgd, nesterov, l_bfgsNN,
             preprocess, predict, gradient, getWeights
     # Artificial neural network
     using NumericExtensions
@@ -21,6 +21,8 @@ module Neural
     include("quasi_methods.jl")
     #L−BFGS
     include("l_BFGS.jl")
+    #Nesterov
+    include("nesterov.jl")
     #ユーティリティ
     include("utils.jl")
 
