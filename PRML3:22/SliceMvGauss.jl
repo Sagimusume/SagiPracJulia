@@ -90,7 +90,7 @@ detS2 = det(S2)
 gx(x::Array{Float64,1}) = (1/3*exp(-(x-μ)'Sⁱ*(x-μ)/2)/(2π*sqrt(detS)) +
                            2/3*exp(-(x-μ2)'Sⁱ2*(x-μ2)/2)/(2π*sqrt(detS2)))[1]
 
-##################### Main#######################
+##################### Main #######################
 x0 = [-4., -8]
 
 @time Xs, progress = mv_slice_sampler(x0, mv_sample_one, gx, 1000);

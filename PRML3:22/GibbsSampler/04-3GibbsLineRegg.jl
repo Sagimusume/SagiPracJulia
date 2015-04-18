@@ -60,7 +60,7 @@ function sampler(BURNIN)
 end
 
 
-NSAMPLES = 10000
+NSAMPLES = 100000
 a_samples = zeros(NSAMPLES,NGAUSS)
 s2_samples = zeros(NSAMPLES)
 
@@ -99,3 +99,7 @@ end
 
 using PyPlot
 
+scatter(x,y)
+plot(xs,averages)
+plot(xs,ys_high)
+plot(xs,ys_low)

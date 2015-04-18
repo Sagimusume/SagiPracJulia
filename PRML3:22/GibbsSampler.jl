@@ -7,7 +7,7 @@ Sⁱ = inv(S)
 detS = det(S)
 
 #目的関数
-f(x) = exp(-(x-μ)'Sⁱ*(x-μ)/2)/(2π*sqrt(detS))
+#f(x) = exp(-(x-μ)'Sⁱ*(x-μ)/2)/(2π*sqrt(detS))
 
 function sample_one(x)
     new_x = rand(Normal(ρ*x[2], 1-ρ^2))

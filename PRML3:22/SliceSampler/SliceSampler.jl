@@ -61,10 +61,10 @@ function mcmc(x,g,N)
 end
 
 #log Mixtur of Gaussian
-f(x) = log(0.75 * pdf(Normal(0.0, 1.0), x) + 0.25 * pdf(Normal(5.0, 1.0), x))
+f(x) = log(0.75 * pdf(Normal(0.0, 1.0), x) + 0.25 * pdf(Normal(8.0, 1.0), x))
 
 #Main
-m = mcmc(0.0, f, 1000)
+m = mcmc(0.0, f, 100000)
 
 #Plot
 n, bins, patches = PyPlot.hist(m,bins=100,normed=true)

@@ -1,7 +1,7 @@
 function hmc_sampler(current_q::Array{Float64},U::Function,grad_U::Function,ϵ::Float64, L::Int64)
     #q = 一般化座標   -> x ->Sample
     #p = 一般化運動量 -> r->Momentum
-    #  = 初期値を乱数でとる->座標qにおける勾配を元に運動量(従って底にて運動量が最大化する)運動量の初期値は正規分布に従いランダムに選ばれる
+    #  = 初期座標x0を適当にとる->座標qにおける勾配を元に運動量(従って底にて運動量が最大化する)をえる。運動量の初期値は正規分布に従いランダムに選ばれる
     #    Loop-運動量に従い座標を微小変化させる->end-loop->現在のハミルトニアンと過去のハミルトニアンの差をexpに入れ。->end one step
 
     q = current_q
