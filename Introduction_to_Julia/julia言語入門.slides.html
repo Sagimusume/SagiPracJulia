@@ -1726,7 +1726,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="julia-">julia言語 入門</h1>
+<h1 id="julia言語-入門">julia言語 入門</h1>
 </div>
 </div>
 </div></section>
@@ -1738,7 +1738,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">目次</h2>
+<h2 id="目次">目次</h2>
 <ul>
 <li>参考サイト</li>
 <li>インストール、REPL、Pythonとの違い</li>
@@ -1763,11 +1763,11 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">参考</h2>
+<h2 id="参考">参考</h2>
 <ul>
 <li>公式<a href="http://docs.julialang.org/en/release-0.3/#manual">ドキュメント</a>がすごく充実しています。</li>
-<li><a href="http://qiita.com/advent-calendar/2014/julialang">julia adventCalender2014</a>には、日本語で書かれた良い資料がたくさんあります。 </li>
-<li>中でも<a href="http://bicycle1885.hatenablog.com/entry/2014/12/23/170745">ここ</a>は日本語で綺麗によくまとめられています。  </li>
+<li><a href="http://qiita.com/advent-calendar/2014/julialang">julia adventCalender2014</a>には、日本語で書かれた良い資料がたくさんあります。</li>
+<li>中でも<a href="http://bicycle1885.hatenablog.com/entry/2014/12/23/170745">ここ</a>は日本語で綺麗によくまとめられています。<br /></li>
 <li>英語ですが<a href="http://quant-econ.net/jl/index.html">ここ</a>のサイトでは機械学習のチュートリアルを兼ねたjulia言語の入門ができます</li>
 <li>ライブラリは用途ごとに<a href="http://svaksha.github.io/Julia.jl/">ここ</a>にまとめられています。公式ライブラリは<a href="">ここ</a>です。</li>
 <li>かなりコアな話ですが言語設計についてはこの<a href="http://arxiv.org/pdf/1209.5145v1.pdf">論文</a>がいいらしいです。</li>
@@ -1783,15 +1783,14 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">インストール</h3>
+<h3 id="インストール">インストール</h3>
 <ul>
-<li><a href="http://julialang.org/downloads/">ここ</a>からプラットフォームに合わせたパッケージを落としてください。<ul>
+<li><a href="http://julialang.org/downloads/">ここ</a>からプラットフォームに合わせたパッケージを落としてください。
+<ul>
 <li>コマンドラインバージョンとJuno(Light Tableというテキストエディタ上に構築されたJulia実行環境)へのリンクがあります</li>
-</ul>
-</li>
+</ul></li>
 <li><p>osxの場合以下のようなaliasを貼ると良いです</p>
-<p>  <code>alias julia=&quot;/Applications/Julia-0.3.7.app/Contents/Resources/julia/bin/julia&quot;</code></p>
-</li>
+<p><code>alias julia=&quot;/Applications/Julia-0.3.7.app/Contents/Resources/julia/bin/julia&quot;</code></p></li>
 </ul>
 </div>
 </div>
@@ -1806,18 +1805,16 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>REPLが使いやすいです。</p>
 <ul>
-<li><p><code>&lt;tab&gt;</code>  で補完  </p>
-</li>
-<li><p>?   で&quot;help&quot;の呼び出し。  </p>
-</li>
-<li>\alpha<code>&lt;tab&gt;</code>   で tex like なUnicode文字への変換。(この場合はαが出力される)</li>
-<li><strong>&quot;;&quot;</strong>   で &quot;shell&quot;の呼び出し。  </li>
-<li><strong>関数名.env`<tab></strong>で関数のリストを出力します。<ul>
+<li><p><code>&lt;tab&gt;</code> で補完</p></li>
+<li>? で&quot;help&quot;の呼び出し。<br /></li>
+<li><code>&lt;tab&gt;</code> で tex like なUnicode文字への変換。(この場合はαが出力される)</li>
+<li><strong>&quot;;&quot;</strong> で &quot;shell&quot;の呼び出し。<br /></li>
+<li><strong>関数名.env`<tab></strong>で関数のリストを出力します。
+<ul>
 <li>オーバーロードされた関数の一覧が表示</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<hr>
+<hr />
 </div>
 </div>
 </div></section><section>
@@ -1861,19 +1858,10 @@ In&nbsp;[1]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="python-">pythonとの違いは?</h2>
-<p>基本的な文法はほとんどpythonと同じです。<br>関数はmatlabと似たものが多かったのですが、現在は多少変わりつつあります。</p>
-<hr>
-<p>主な違いは<a href="http://docs.julialang.org/en/release-0.3/manual/noteworthy-differences/">Noteworthy Differences...</a>に良くまとまっています。</p>
-<ul>
-<li>配列のインデックスは &quot;1&quot; から始まる。</li>
-<li>配列の最後の要素の指定は&quot;-1&quot; でなく&quot;end&quot;。</li>
-<li>&quot;Comprehensions&quot;はまだ&quot;for&quot; のみ利用可能?</li>
-<li>juliaの&quot;配列&quot;は&quot;<em>列(Column)</em>&quot;がメインです。</li>
-<li>&quot;return&quot;がなくても、最後に評価されたものが帰ってきます。</li>
-<li>forなどにスコープがあります</li>
-<li>end文がつきます rubyと同じです</li>
-</ul>
+<h2 id="pythonとの違いは">pythonとの違いは?</h2>
+<p>基本的な文法はほとんどpythonと同じです。<br />関数はmatlabと似たものが多かったのですが、現在は多少変わりつつあります。</p>
+<hr />
+<p>主な違いは<a href="http://docs.julialang.org/en/release-0.3/manual/noteworthy-differences/">Noteworthy Differences...</a>に良くまとまっています。 * 配列のインデックスは &quot;1&quot; から始まる。 * 配列の最後の要素の指定は&quot;-1&quot; でなく&quot;end&quot;。 * &quot;Comprehensions&quot;はまだ&quot;for&quot; のみ利用可能? * juliaの&quot;配列&quot;は&quot;<em>列(Column)</em>&quot;がメインです。 * &quot;return&quot;がなくても、最後に評価されたものが帰ってきます。 * forなどにスコープがあります * end文がつきます rubyと同じです</p>
 <p>などがあります。</p>
 </div>
 </div>
@@ -2010,11 +1998,11 @@ true
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">構文</h2>
+<h2 id="構文">構文</h2>
 <ul>
 <li>基本的な構文は、ほとんどpythonと同じです。</li>
 </ul>
-<h3 id="-">コメント</h3>
+<h3 id="コメント">コメント</h3>
 </div>
 </div>
 </div>
@@ -2046,7 +2034,7 @@ In&nbsp;[5]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="for-">for ループ</h3>
+<h3 id="for-ループ">for ループ</h3>
 </div>
 </div>
 </div>
@@ -2096,7 +2084,7 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="if-elseif-else-">if elseif else　三項演算子</h3>
+<h3 id="if-elseif-else三項演算子">if elseif else　三項演算子</h3>
 </div>
 </div>
 </div>
@@ -2190,6 +2178,126 @@ x is less than y
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="short-circuit-evaluation">Short-Circuit Evaluation</h3>
+<ul>
+<li>&quot;<strong>&amp;&amp;</strong>&quot; 前件が真であるならば、以降が処理される</li>
+<li>&quot;<strong>||</strong>&quot; 前件が偽であるならば、以降が処理される</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">n</span> <span class="o">=</span> <span class="mi">57</span><span class="p">;</span> 
+<span class="n">isprime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;It&#39;s a prime!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[29]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+false
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">isprime</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">||</span> <span class="s">&quot;It&#39;s not a prime!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[30]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&quot;It&apos;s not a prime!&quot;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">function</span><span class="nf"> factorial</span><span class="p">(</span><span class="n">n</span><span class="p">::</span><span class="kt">Int</span><span class="p">)</span>
+           <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nb">error</span><span class="p">(</span><span class="s">&quot;n must be non-negative&quot;</span><span class="p">)</span>
+           <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="k">return</span> <span class="mi">1</span>
+           <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[31]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+factorial (generic function with 1 method)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
@@ -2260,15 +2368,15 @@ n =&gt; 89
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-begin-end-let-end">ブロック構文 begin~end, let~end</h3>
-<hr>
+<h3 id="ブロック構文-beginend-letend">ブロック構文 begin~end, let~end</h3>
+<hr />
 <ul>
-<li>ブロックを形成する構文としない構文が存在<ul>
+<li>ブロックを形成する構文としない構文が存在
+<ul>
 <li>function, while, for, try, catch, finally, let, typeはスコープを形成</li>
 <li>begin, ifは新しくスコープを形成しない</li>
 <li>関数はレキシカルスコープを持つ</li>
-</ul>
-</li>
+</ul></li>
 <li>詳しくは<a href="http://docs.julialang.org/en/release-0.3/manual/variables-and-scoping/">ここ</a>参照</li>
 </ul>
 </div>
@@ -2361,7 +2469,7 @@ In&nbsp;[11]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-try-catch">例外処理 try ~ catch</h3>
+<h3 id="例外処理-try-catch">例外処理 try ~ catch</h3>
 <ul>
 <li><a href="http://docs.julialang.org/en/release-0.3/manual/control-flow/#built-in-exceptions">例外</a></li>
 <li>finallyも存在</li>
@@ -2422,8 +2530,8 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">配列・多次元配列</h2>
-<hr>
+<h2 id="配列多次元配列">配列・多次元配列</h2>
+<hr />
 <ul>
 <li>多次元配列は, Array(型,(次元))によって定義</li>
 <li>配列のインデックスは　<strong>A[行,列]</strong>　で指定</li>
@@ -2440,24 +2548,24 @@ In&nbsp;[12]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">密行列　　</h2>
+<h2 id="密行列">密行列　　</h2>
 <ul>
-<li>Array(type, dims...)    <ul>
-<li><strong>初期化されていない配列  </strong></li>
-</ul>
-</li>
-<li>[1, 2, 3, 4, ...]<ul>
+<li>Array(type, dims...)
+<ul>
+<li><strong>初期化されていない配列 </strong></li>
+</ul></li>
+<li>[1, 2, 3, 4, ...]
+<ul>
 <li><strong>リテラルによる配列(ベクトル)定義</strong></li>
-</ul>
-</li>
-<li>[1 2 3 4]<ul>
+</ul></li>
+<li>[1 2 3 4]
+<ul>
 <li><strong>リテラルによる行列定義</strong></li>
-</ul>
-</li>
-<li>[1:2:10]  <ul>
+</ul></li>
+<li>[1:2:10]
+<ul>
 <li><strong>1から2づつ１０まで</strong></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -2469,10 +2577,10 @@ In&nbsp;[12]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>cell(type, dims...)<br>  <strong>初期化されていないセル配列  </strong></li>
-<li>zeros(type, dims...)<br>  <strong>０配列  </strong></li>
-<li>ones(type, dims...)<br>  <strong>１配列  </strong></li>
-<li>eye(type, dims)<br>  <strong>単位行列  </strong></li>
+<li>cell(type, dims...)<br /><strong>初期化されていないセル配列 </strong></li>
+<li>zeros(type, dims...)<br /><strong>０配列 </strong></li>
+<li>ones(type, dims...)<br /><strong>１配列 </strong></li>
+<li>eye(type, dims)<br /><strong>単位行列 </strong></li>
 </ul>
 </div>
 </div>
@@ -2809,6 +2917,239 @@ In&nbsp;[19]:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+10x10 Array{Int64,2}:
+  1  2  5   4   5   8   0  3  0  10
+  5  8  5   7   8   1  10  3  5   2
+ 10  1  5   1   2   8   2  5  4   7
+  8  2  4   4   9   4  10  2  3   3
+  2  2  0   1   0  10   1  1  7   7
+  3  7  6   7   7   7   4  9  4  10
+  3  7  0   0   9   3  10  2  7   8
+  4  4  4  10  10   2   4  0  9   2
+  3  3  4   8   0   1   2  8  4  10
+  7  1  5   2  10   8   4  2  4   5
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="o">.==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">a</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+10x10 Array{Int64,2}:
+  1  2   5   4   5   8  11   3  11  10
+  5  8   5   7   8   1  10   3   5   2
+ 10  1   5   1   2   8   2   5   4   7
+  8  2   4   4   9   4  10   2   3   3
+  2  2  11   1  11  10   1   1   7   7
+  3  7   6   7   7   7   4   9   4  10
+  3  7  11  11   9   3  10   2   7   8
+  4  4   4  10  10   2   4  11   9   2
+  3  3   4   8  11   1   2   8   4  10
+  7  1   5   2  10   8   4   2   4   5
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="最後に配列のソートです">最後に配列のソートです。</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#(collect,はEnumuなどイテレータオブジェクトの展開に用います)</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">collect</span><span class="p">(</span><span class="n">enumerate</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[1]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+10-element Array{(Int64,Int64),1}:
+ (1,43) 
+ (2,5)  
+ (3,84) 
+ (4,60) 
+ (5,49) 
+ (6,24) 
+ (7,47) 
+ (8,84) 
+ (9,63) 
+ (10,76)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#Base.sort(v, [alg=&lt;algorithm&gt;,] [by=&lt;transform&gt;,] [lt=&lt;comparison&gt;,] [rev=false]), v以外は名前つき引数です。</span>
+<span class="n">sort</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[2]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+10-element Array{(Int64,Int64),1}:
+ (2,5)  
+ (6,24) 
+ (1,43) 
+ (7,47) 
+ (5,49) 
+ (4,60) 
+ (9,63) 
+ (10,76)
+ (3,84) 
+ (8,84) 
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">table</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">sortrows</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+10x10 Array{Int64,2}:
+ 1  1  1  4  4  1  4  2  1  3
+ 1  3  1  2  1  2  3  2  4  2
+ 1  3  2  3  4  3  1  4  4  2
+ 2  2  3  3  2  4  3  1  3  3
+ 2  4  4  3  1  2  1  4  4  4
+ 3  3  4  2  1  2  3  2  3  1
+ 3  4  1  4  1  2  3  1  3  3
+ 4  1  1  2  2  1  3  2  4  1
+ 4  3  1  3  3  1  3  4  3  3
+ 4  4  2  2  4  3  2  1  2  4
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2816,16 +3157,16 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">疎行列</h2>
+<h2 id="疎行列">疎行列</h2>
 <ul>
-<li>sparse(Array)  <ul>
-<li><strong>密行列</strong>を疎行列に  </li>
-</ul>
-</li>
-<li>spzeros(type,dims...)  <ul>
-<li>疎な零行列<br>etc  </li>
-</ul>
-</li>
+<li>sparse(Array)
+<ul>
+<li><strong>密行列</strong>を疎行列に<br /></li>
+</ul></li>
+<li>spzeros(type,dims...)
+<ul>
+<li>疎な零行列<br />etc</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -2838,10 +3179,10 @@ In&nbsp;[19]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">辞書(ハッシュ)</h2>
+<h2 id="辞書ハッシュ">辞書(ハッシュ)</h2>
 <ul>
-<li>Dict{K,V}(key::Array{K}, value::Array{V})    </li>
-<li>[key =&gt; value]  </li>
+<li>Dict{K,V}(key::Array{K}, value::Array{V})<br /></li>
+<li>[key =&gt; value]</li>
 </ul>
 </div>
 </div>
@@ -3003,7 +3344,7 @@ Dict{ASCIIString,Int64} with 2 entries:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">乱数（パッケージの利用)</h3>
+<h3 id="乱数パッケージの利用">乱数（パッケージの利用)</h3>
 <ul>
 <li>基本的な乱数関数はrand,randn,randperm</li>
 <li>乱数発生には外部ライブラリの <strong>Distributions</strong>　がよく用いられる</li>
@@ -3018,23 +3359,23 @@ Dict{ASCIIString,Int64} with 2 entries:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>パッケージ管理は、REPLで行えます。  <ul>
-<li>パッケージの追加  <ul>
-<li>Pkg.add(&quot;パッケージ名&quot;)  </li>
-<li>Pkg.clone(&quot;GitHubのURL&quot;) </li>
-</ul>
-</li>
-<li>buildが必要になる場合<br>  Pkg.build(&quot;パッケージ名&quot;)</li>
-<li>juliaを再インストールした時などに復元<ul>
+<li>パッケージ管理は、REPLで行えます。
+<ul>
+<li>パッケージの追加
+<ul>
+<li>Pkg.add(&quot;パッケージ名&quot;)<br /></li>
+<li>Pkg.clone(&quot;GitHubのURL&quot;)</li>
+</ul></li>
+<li>buildが必要になる場合<br />Pkg.build(&quot;パッケージ名&quot;)</li>
+<li>juliaを再インストールした時などに復元
+<ul>
 <li>Pkg.build()</li>
-</ul>
-</li>
-<li>パッケージの削除  <ul>
+</ul></li>
+<li>パッケージの削除
+<ul>
 <li>Pkg.rm(&quot;パッケージ名&quot;)</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -3103,16 +3444,13 @@ In&nbsp;[23]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-task-http-julia-readthedocs-org-en-latest-manual-control-flow-tasks-and-events-"><a href="http://julia.readthedocs.org/en/latest/manual/control-flow/#tasks-and-events">Task</a>(コルーチン)</h3>
-<hr>
+<h3 id="taskコルーチン"><a href="http://julia.readthedocs.org/en/latest/manual/control-flow/#tasks-and-events">Task</a>(コルーチン)</h3>
+<hr />
 <p>コルーチンとは,処理をいったん中断し,その後必要に応じてにその処理の続きから再開することができる制御構造です</p>
 <ul>
-<li><p>produce<br>処理を中断する(指定する)</p>
-</li>
-<li><p>Task<br>タスクを生成する</p>
-</li>
-<li><p>consum<br>タスクを再開する  </p>
-</li>
+<li><p>produce<br />処理を中断する(指定する)</p></li>
+<li><p>Task<br />タスクを生成する</p></li>
+<li><p>consum<br />タスクを再開する</p></li>
 </ul>
 <p><a href="http://julia.readthedocs.org/en/latest/manual/parallel-computing/#man-parallel-computing">パラレル</a>化する際にも似た様な制御構造を利用しています</p>
 </div>
@@ -3197,12 +3535,12 @@ stop
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="-">コルーチンを使ってギブスサンプラーを作ってみよう!!</h4>
+<h4 id="コルーチンを使ってギブスサンプラーを作ってみよう">コルーチンを使ってギブスサンプラーを作ってみよう!!</h4>
 <ul>
 <li>多変量正規分布からサンプリング</li>
-<li>入力ベクトル${\bf x}=[x, y]^T$,平均ベクトルを$\mu$、共分散行列を$\Sigma$とすると多変量正規分布は</li>
+<li>入力ベクトル<span class="math">\({\bf x}=[x, y]^T\)</span>,平均ベクトルを<span class="math">\(\mu\)</span>、共分散行列を<span class="math">\(\Sigma\)</span>とすると多変量正規分布は</li>
 </ul>
-<p>$$ p(x, y) = \frac{1}{(\sqrt{2\pi})^2{\rm det}(\Sigma)} \exp\left( - \frac{({\bf x}-\mu)^T\Sigma^{-1}({\bf x}-\mu)}{2} \right)$$</p>
+<p><span class="math">\[ p(x, y) = \frac{1}{(\sqrt{2\pi})^2{\rm det}(\Sigma)} \exp\left( - \frac{({\bf x}-\mu)^T\Sigma^{-1}({\bf x}-\mu)}{2} \right)\]</span></p>
 </div>
 </div>
 </div></section><section>
@@ -3260,12 +3598,12 @@ f (generic function with 1 method)
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>ギブスサンプリング<ul>
+<li>ギブスサンプリング
+<ul>
 <li>同時分布においてサンプルしたい確率変数を除いた確率変数に条件付けされた分布からのサンプルを繰り返すことで目的とする分布からのサンプルを得る手法</li>
 <li>xのサンプルはp(x | y)から、yのサンプルはp(y | x)からサンプリング</li>
-<li>平均ベクトル$\mu=[0, 0]^T$、共分散行列の対角項が1, 共分散項が$\rho$のとき$p(x|y)=N(\rho y, 1 - \rho^2)$</li>
-</ul>
-</li>
+<li>平均ベクトル<span class="math">\(\mu=[0, 0]^T\)</span>、共分散行列の対角項が1, 共分散項が<span class="math">\(\rho\)</span>のとき<span class="math">\(p(x|y)=N(\rho y, 1 - \rho^2)\)</span></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -3422,7 +3760,7 @@ PyObject &lt;matplotlib.collections.PathCollection object at 0x13b419d10&gt;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">関数</h2>
+<h2 id="関数">関数</h2>
 </div>
 </div>
 </div>
@@ -3721,14 +4059,14 @@ In&nbsp;[37]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">無名関数</h3>
+<h3 id="無名関数">無名関数</h3>
 <ul>
 <li>(x, y) -&gt; 関数本体</li>
-<li>do 構文<ul>
+<li>do 構文
+<ul>
 <li>do構文は、無名関数を作る</li>
 <li>第一引数が関数型である関数に対してはdo構文を用いることによってdo以下に関数本体を書くことができる</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -3785,17 +4123,17 @@ In&nbsp;[38]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="-">マクロを搭載</h4>
+<h4 id="マクロを搭載">マクロを搭載</h4>
 <ul>
-<li><strong><em>@</em></strong>から始まるものは、<em><em>マクロ</em></em>と呼ばれるものです。  </li>
-<li>ストリングスタイプのマクロも存在<ul>
-<li>正規表現リテラルのように使える<strong> r&quot; &quot;</strong>もマクロ<ul>
-<li>match(r&quot;^\s*(?:#|$)&quot;, &quot;# a comment&quot;)</li>
-</ul>
-</li>
+<li>**_<span class="citation">@_</span>**から始まるものは、_<em>マクロ</em>_と呼ばれるものです。<br /></li>
+<li>ストリングスタイプのマクロも存在
+<ul>
+<li>正規表現リテラルのように使える** r&quot; &quot;**もマクロ
+<ul>
+<li>match(r&quot;^(?:#|$)&quot;, &quot;# a comment&quot;)</li>
+</ul></li>
 <li>バージョン文字列を表すマクロ<code>v&quot;1.2.3&quot;</code>やバイナリ文字列を表すマクロ<code>b&quot;DATA\xff\u2200&quot;</code>なども存在</li>
-</ul>
-</li>
+</ul></li>
 <li>juliaのマクロは、Lisp like のかなり強力なものが搭載されています。</li>
 </ul>
 </div>
@@ -3885,25 +4223,25 @@ elapsed time: 0.001163786 seconds (13896 bytes allocated)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">低レベルコードの出力</h3>
+<h3 id="低レベルコードの出力">低レベルコードの出力</h3>
 <ul>
 <li>与えられた引数と型名にマッチする関数のASTやLLVMバイトコード、ネイティブコードを出力可能</li>
-<li>code_lowered<ul>
+<li>code_lowered
+<ul>
 <li>低レベルASTの出力</li>
-</ul>
-</li>
-<li>code_typed<ul>
+</ul></li>
+<li>code_typed
+<ul>
 <li>型推論された低レベルASTの出力</li>
-</ul>
-</li>
-<li>code_llvm<ul>
+</ul></li>
+<li>code_llvm
+<ul>
 <li>LLVMバイトコードの出力</li>
-</ul>
-</li>
-<li>code_native<ul>
+</ul></li>
+<li>code_native
+<ul>
 <li>ネイティブコードの出力</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -4149,10 +4487,9 @@ Warning: Returned code may not match what actually runs.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">メタプログラミング</h2>
-<hr>
-<p>簡単なマクロの定義と機能を載せておきます。<br>コード自体をオブジェクトとして扱うものを同図像性(Homoiconicity)と呼びます。
-juliaのマクロは、Lispと同じように抽象構文木をレベルで操作が可能です。 </p>
+<h2 id="メタプログラミング">メタプログラミング</h2>
+<hr />
+<p>簡単なマクロの定義と機能を載せておきます。<br />コード自体をオブジェクトとして扱うものを同図像性(Homoiconicity)と呼びます。 juliaのマクロは、Lispと同じように抽象構文木をレベルで操作が可能です。</p>
 </div>
 </div>
 </div></section><section>
@@ -4582,10 +4919,10 @@ In&nbsp;[55]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="interpoltation">Interpoltation</h3>
 <ul>
-<li>Expressionの内部で通常のjuliaのコードを処理したい場合<ul>
+<li>Expressionの内部で通常のjuliaのコードを処理したい場合
+<ul>
 <li>接頭辞<code>$</code>によって処理可能</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -4859,7 +5196,7 @@ In&nbsp;[62]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">マクロ</h2>
+<h2 id="マクロ">マクロ</h2>
 <ul>
 <li>マクロを用いることで実行を行う前に引数に対する様々な処理をすることができます。</li>
 </ul>
@@ -4958,7 +5295,7 @@ In&nbsp;[64]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">なぜマクロが必要なのか</h3>
+<h3 id="なぜマクロが必要なのか">なぜマクロが必要なのか</h3>
 </div>
 </div>
 </div></section><section>
@@ -5042,15 +5379,15 @@ In&nbsp;[66]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="julia-">juliaにおけるコードの評価</h3>
+<h3 id="juliaにおけるコードの評価">juliaにおけるコードの評価</h3>
 <ul>
 <li>以上のようにExpressonを引数に持ち返り値もExpressonであるような関数を定義してもいいのではないかと思うかもしれない</li>
-<li>しかしマクロを使うメリットはコードの変換・生成にある<ul>
-<li>juliaにおけるコード評価は大雑把に２種類の段階を踏む,第一段階ではrawコードの解析(パース)を行う、そして第二段階で、実行を行う。  </li>
+<li>しかしマクロを使うメリットはコードの変換・生成にある
+<ul>
+<li>juliaにおけるコード評価は大雑把に２種類の段階を踏む,第一段階ではrawコードの解析(パース)を行う、そして第二段階で、実行を行う。<br /></li>
 <li>メタプログラミングを使うことで、第一段階が終わった段階のコードに対してコードの変換・生成を行うことができる。</li>
-<li>それにより、ネイティブなjuliaのコードと同じ速度で実行が可能となっている、そのために、マクロは必要なのだ。  たぶん</li>
-</ul>
-</li>
+<li>それにより、ネイティブなjuliaのコードと同じ速度で実行が可能となっている、そのために、マクロは必要なのだ。 たぶん</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -5228,9 +5565,9 @@ In&nbsp;[71]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">コードジェネレーション</h3>
-<hr>
-<p>似たようなコードを何度も書くのはめんどくさい,だけどやらなきゃならない時<br>基本的なところは上記とほとんど同じです.</p>
+<h3 id="コードジェネレーション">コードジェネレーション</h3>
+<hr />
+<p>似たようなコードを何度も書くのはめんどくさい,だけどやらなきゃならない時<br />基本的なところは上記とほとんど同じです.</p>
 <p>四則演算などを一気に定義します。</p>
 </div>
 </div>
@@ -5351,10 +5688,10 @@ In&nbsp;[73]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="io">IO</h2>
-<hr>
-<p>open<br>read<br>write  </p>
+<hr />
+<p>open<br />read<br />write</p>
 <p>など、一般的な出入力を備えています。</p>
-<hr>
+<hr />
 <p><a href="http://julia.readthedocs.org/en/latest/manual/networking-and-streams/">ここ</a>が詳しいです。</p>
 </div>
 </div>
@@ -5365,17 +5702,16 @@ In&nbsp;[73]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="r-">Rのデータフレームに似たライブラリ</h2>
+<h2 id="rのデータフレームに似たライブラリ">Rのデータフレームに似たライブラリ</h2>
 <h3 id="dataframes">DataFrames</h3>
 <ul>
-<li>入出力はこれを使うと便利です。 </li>
+<li>入出力はこれを使うと便利です。</li>
 <li>導入はPkg.add(&quot;DataFrames&quot;)</li>
-<li>他にも,音声、画像などデータを扱うためのライブラリがあります。  <ul>
-<li>一番最後にまとめてあるので暇なら見てみてください。  </li>
+<li>他にも,音声、画像などデータを扱うためのライブラリがあります。
+<ul>
+<li>一番最後にまとめてあるので暇なら見てみてください。<br />___</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<hr>
 </div>
 </div>
 </div></section><section>
@@ -5467,7 +5803,7 @@ Union(UTF8String,ASCIIString)[&quot;.ipynb_checkpoints&quot;,&quot;convert.sh&qu
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="do-i-o-">do構文を使ったI/O処理</h3>
+<h3 id="do構文を使ったio処理">do構文を使ったI/O処理</h3>
 </div>
 </div>
 </div>
@@ -5596,22 +5932,21 @@ In&nbsp;[78]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">モジュール</h2>
-<hr>
+<h2 id="モジュール">モジュール</h2>
+<hr />
 <ul>
-<li>pythonとは違い、module ~ end　により定義される。  <ul>
-<li>pythonはファイル単位だったと思います        </li>
-<li>julia起動時に読み込まれるモジュールは基本的には以下<ul>
-<li><strong>Base</strong>   </li>
-<li><strong>Core</strong>  </li>
-<li><strong>Main</strong>    </li>
+<li>pythonとは違い、module ~ end　により定義される。
+<ul>
+<li>pythonはファイル単位だったと思います<br /></li>
+<li>julia起動時に読み込まれるモジュールは基本的には以下
+<ul>
+<li><strong>Base</strong><br /></li>
+<li><strong>Core</strong><br /></li>
+<li><strong>Main</strong><br /></li>
+</ul></li>
+</ul></li>
+<li><strong>Main</strong>モジュールがワークスペースになります。 ___</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><strong>Main</strong>モジュールがワークスペースになります。</li>
-</ul>
-<hr>
 </div>
 </div>
 </div></section><section>
@@ -5712,20 +6047,20 @@ while loading In[79], in expression starting on line 24
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">ちょっと変わった型システム</h2>
-<hr>
+<h2 id="ちょっと変わった型システム">ちょっと変わった型システム</h2>
+<hr />
 <ul>
-<li>juliaの型(クラス)システムは、多重ディスパッチと呼ばれるものを利用し多態性を表現<ul>
+<li>juliaの型(クラス)システムは、多重ディスパッチと呼ばれるものを利用し多態性を表現
+<ul>
 <li>オブジェクト指向言語ではクラス(型）にメソッド(関数)が所属</li>
-<li>juliaでは、関数(メソッド)に型(クラス)が所属<ul>
-<li>具体的には、関数の引数の型によって、関数の挙動が変化<ul>
+<li>juliaでは、関数(メソッド)に型(クラス)が所属
+<ul>
+<li>具体的には、関数の引数の型によって、関数の挙動が変化
+<ul>
 <li>関数のオーバーロードに近い形のものを想像してくださいです</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -5736,24 +6071,191 @@ while loading In[79], in expression starting on line 24
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">型</h2>
-<hr>
-<p>型は、大きく分けると</p>
-<ul>
-<li>抽象型  </li>
-<li>具象型  </li>
-</ul>
+<h2 id="型">型</h2>
+<hr />
+<p>型は、大きく分けると * 抽象型<br />* 具象型</p>
 <p>に分けることができます。</p>
 <ul>
-<li>抽象型は、変数を持つことができません!!!
-さらに、インスタンスも生成できません。  </li>
+<li>抽象型は、変数を持つことができません!!! さらに、インスタンスも生成できません。<br /></li>
 <li>具象型は　継承できません!!</li>
 </ul>
 <p>従って、<strong>移譲(Delegation)</strong>を使い継承関係を構築することもできます。</p>
-<p>どうしても使いたい場合は、trait-mixin マクロなどを作ったりすることもできます。</p>
-<hr>
+<p>どうしても使いたい場合は、trait-mixin マクロなどを作ったりすることもできます。 ____</p>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="型公式サイトの目次です">型公式サイトの　目次です</h4>
+<h3 id="抽象型">抽象型</h3>
+<ul>
+<li><strong>Abstruct Type </strong><br />抽象型の定義です</li>
+</ul>
+<h3 id="具象型">具象型</h3>
+<ul>
+<li><p><strong>Bit Type</strong><br />ビット型を定義IntとかFloat64などはこの型です。<br />-- How to use --<br />定義:: bitstype «bits» «name» &lt;: «supertype»<br />実際に使うには,少し面倒で下に少しだけ紹介してあります。</p></li>
+<li><p><strong>Composit Type</strong><br />pythonのクラス　や　Cの構造体に近いものと考えてください。</p></li>
+<li><p><strong>Immutable Composit Type</strong><br />不変型です、インスタンスの値::(注)を変更することができない型です。</p></li>
+</ul>
+<h3 id="パラメータを含む型">パラメータを含む型</h3>
+<ul>
+<li><p><strong>Parametric Type </strong><br />パラメータを持つ型です。型に定義された、変数の型を任意の型に制限します。<br />具体的には、以下で取り扱っています。</p></li>
+<li><p><strong>Parametric Abstract Types</strong><br />パラメータを含んだ抽象型です。<br />Singleton Types, abstract　<name>{T}などがありす　　　</p></li>
+<li><p><strong>Pramtric Composit Type</strong><br />パラメータを含んだComposit Typeです。</p></li>
+<li><p><strong>Parametric Bits Types</strong></p></li>
+<li><p><strong>Type Union</strong><br />結合型を作ります。e.g. <code>&lt;Char型とStrings型&gt;</code><br />(Union(Char, String))</p></li>
+<li><p><strong>Type Aliases</strong><br />型のエイリアスを作ります。e.g. <code>(Array{T,1} == Vector{T})</code><br />'typealias Vector{T} Array{T,1}'で定義します</p></li>
+</ul>
+<p>Tuple Types</p>
+<p>Vararg Tuple Types</p>
+<p>“Value types”</p>
+<p>Nullable Types: Representing Missing Values** v0.4~</p>
+<p>型の話は量が多くて</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="juliaの型グラフ">Juliaの型グラフ</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#Top::全ての型はAny型の子クラス,逆はNone型</span>
+<span class="n">level</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">function</span><span class="nf"> showtypetree</span><span class="p">(</span><span class="nb">subtype</span><span class="p">)</span>
+    <span class="kd">global</span> <span class="n">level</span>
+    <span class="n">subtypelist</span> <span class="o">=</span> <span class="n">filter</span><span class="p">(</span><span class="n">asubtype</span> <span class="o">-&gt;</span> <span class="n">asubtype</span> <span class="o">!=</span> <span class="kt">Any</span><span class="p">,</span> <span class="n">subtypes</span><span class="p">(</span><span class="nb">subtype</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">length</span><span class="p">(</span><span class="n">subtypelist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> 
+         <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span> <span class="o">^</span> <span class="n">level</span><span class="p">,</span> <span class="nb">subtype</span><span class="p">)</span>        
+         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+         <span class="n">map</span><span class="p">(</span><span class="n">showtypetree</span><span class="p">,</span> <span class="n">subtypelist</span><span class="p">)</span>
+         <span class="n">level</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">else</span>
+         <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span> <span class="o">^</span> <span class="n">level</span><span class="p">,</span> <span class="nb">subtype</span><span class="p">)</span>
+    <span class="k">end</span>    
+<span class="k">end</span>
+
+<span class="n">showtypetree</span><span class="p">(</span><span class="n">AbstractArray</span><span class="p">)</span><span class="c">#Number, String, AbstractArrayを見てみたいな。</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+AbstractArray{T,N}
+	AbstractSparseArray{Tv,Ti,N}
+		SparseMatrixCSC{Tv,Ti&lt;:Integer}
+	Bidiagonal{T}
+	DArray{T,N,A}
+	DenseArray{T,N}
+		Array{T,N}
+		BitArray{N}
+		SharedArray{T,N}
+	Diagonal{T}
+	Givens{T}
+	Hermitian{T}
+	HessenbergQ{T}
+	Message
+	QRCompactWYQ{S}
+	QRPackedQ{T}
+	Range{T}
+		FloatRange{T&lt;:FloatingPoint}
+		OrdinalRange{T,S}
+			StepRange{T,S}
+			UnitRange{T&lt;:Real}
+	SubArray{T,N,A&lt;:AbstractArray{T,N},I&lt;:(Union(Range{Int64},Int64)...,)}
+	SymTridiagonal{T}
+	SymmetricRFP{T&lt;:Union(Complex{Float64},Float32,Float64,Complex{Float32})}
+	Symmetric{T}
+	TriangularRFP{T&lt;:Union(Complex{Float64},Float32,Float64,Complex{Float32})}
+	Triangular{T,S&lt;:AbstractArray{T,2},UpLo,IsUnit}
+	Tridiagonal{T}
+	Woodbury{T}
+
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[10]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+0
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#Bit型はこんな感じで定義します。</span>
+<span class="k">import</span> <span class="n">Core</span><span class="o">.</span><span class="n">Intrinsics</span><span class="o">.</span><span class="n">box</span><span class="p">,</span> <span class="n">Core</span><span class="o">.</span><span class="n">Intrinsics</span><span class="o">.</span><span class="n">unbox</span> <span class="c">#box、unboxはかなりプリミティブな関数です。</span>
+
+<span class="k">bitstype</span> <span class="mi">64</span> <span class="n">Blah64</span> 
+<span class="k">bitstype</span> <span class="mi">32</span> <span class="n">Blash32</span>
+
+
+<span class="n">blash64</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">Blah64</span><span class="p">,</span> <span class="n">unbox</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> 
+<span class="c">#または、型の解釈を変更する関数を用い。</span>
+<span class="n">blash32</span> <span class="o">=</span> <span class="n">reinterpret</span><span class="p">(</span><span class="n">Blash32</span><span class="p">,</span><span class="n">uint32</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n">blash32</span><span class="p">,</span><span class="n">blash64</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[12]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+(Blash32(0x00000008),Blah64(0x0000000000000001))
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -5761,7 +6263,7 @@ while loading In[79], in expression starting on line 24
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="-">クォータニオンを定義してみよう!!</h4>
+<h4 id="クォータニオンを定義してみよう">クォータニオンを定義してみよう!!</h4>
 </div>
 </div>
 </div></section><section>
@@ -5769,7 +6271,7 @@ while loading In[79], in expression starting on line 24
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[80]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5822,14 +6324,14 @@ In&nbsp;[80]:
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
 Warning: New definition 
-    *(Quaternion{T&lt;:Real},Real) at In[80]:34
+    *(Quaternion{T&lt;:Real},Real) at In[14]:34
 is ambiguous with: 
     *(Number,Bool) at bool.jl:58.
 To fix, define 
     *(Quaternion{T&lt;:Real},Bool)
 before the new definition.
 Warning: New definition 
-    *(Real,Quaternion{T&lt;:Real}) at In[80]:35
+    *(Real,Quaternion{T&lt;:Real}) at In[14]:35
 is ambiguous with: 
     *(Bool,T&lt;:Number) at bool.jl:52.
 To fix, define 
@@ -5841,12 +6343,12 @@ before the new definition.
 </div>
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[80]:</div>
+    Out[14]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-* (generic function with 136 methods)
+* (generic function with 118 methods)
 </pre>
 </div>
 
@@ -5860,7 +6362,7 @@ before the new definition.
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[81]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -5879,7 +6381,7 @@ In&nbsp;[81]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[81]:</div>
+    Out[15]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -5897,11 +6399,13 @@ Quaternion{Int64}(-6,24,48,48)
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[82]:
+In&nbsp;[16]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">super</span><span class="p">(</span><span class="kt">Int64</span><span class="p">)</span>
+<div class="highlight"><pre><span class="c">#パラメトリックタイプの型が変わり数値型はFloat64に統一されました。</span>
+<span class="c">#この挙動については、したで少し説明があります。</span>
+<span class="n">q1</span><span class="o">*</span><span class="mf">0.5</span>
 </pre></div>
 
 </div>
@@ -5913,12 +6417,12 @@ In&nbsp;[82]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[82]:</div>
+    Out[16]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-Signed
+Quaternion{Float64}(0.5,1.0,1.5,2.0)
 </pre>
 </div>
 
@@ -5927,18 +6431,51 @@ Signed
 </div>
 </div>
 
-</div></section><section>
-    
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="パラメトリックタイプで重要なことは">パラメトリックタイプで重要なことは</h3>
+<ul>
+<li>** たとえ Float64 &lt;: Real であっても Quaternion{Float64} &lt;: Quaternion{Real}. ではないことです。**</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="型理論の言葉を借りると">型理論の言葉を借りると</h4>
+<p>パラメトリックな型はは共変や反変でなく不変である。</p>
+<p>wikipediaより * 共変(covariant) :: 狭い型から,広い型へ変換すること。 * 反変(contravariant) :: 広い型から,狭い型へ変換すること。 * 不変(invariant) :: そのた</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="tuple-type">Tuple Type</h3>
+<ul>
+<li>順序,型,imutableです。</li>
+<li>パラメータについては共変</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[83]:
+In&nbsp;[19]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c"># Any型</span>
-<span class="c"># 全ての型はAny型の子クラス</span>
-<span class="n">subtypes</span><span class="p">(</span><span class="kt">Any</span><span class="p">)</span>
+<div class="highlight"><pre><span class="nb">typeof</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Hello Julia&quot;</span><span class="p">,</span> <span class="mf">2.</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -5950,38 +6487,76 @@ In&nbsp;[83]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[83]:</div>
+    Out[19]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-217-element Array{Any,1}:
- AbstractAlphaColorValue{C&lt;:ColorValue{T},T&lt;:Real}                           
- AbstractArray{T,N}                                                          
- AbstractCmd                                                                 
- AbstractHistogram{T&lt;:Real,N,E}                                              
- AbstractPDMat                                                               
- AbstractREPL                                                                
- AbstractRNG                                                                 
- AbstractTime                                                                
- Algorithm                                                                   
- Any                                                                         
- ArgInfo{AN}                                                                 
- Associative{K,V}                                                            
- AsyncWork                                                                   
- ⋮                                                                           
- VonMisesFisherSampler                                                       
- WeakRef                                                                     
- WeightVec{W,Vec&lt;:AbstractArray{T&lt;:Real,1}}                                  
- Worker                                                                      
- ZeroOffsetVector                                                            
- ZeroVector{T}                                                               
- Zip2{I1,I2}                                                                 
- Zip{I&lt;:(Any...,)}                                                           
- c_CholmodDense{T&lt;:Union(Complex{Float64},Float64)}                          
- c_CholmodFactor{Tv&lt;:Union(Complex{Float64},Float64),Ti&lt;:Union(Int32,Int64)} 
- c_CholmodSparse{Tv&lt;:Union(Complex{Float64},Float64),Ti&lt;:Union(Int32,Int64)} 
- c_CholmodTriplet{Tv&lt;:Union(Complex{Float64},Float64),Ti&lt;:Union(Int32,Int64)}
+(Int64,ASCIIString,Float64)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="n">String</span><span class="p">)</span> <span class="o">&lt;:</span><span class="p">(</span><span class="n">Number</span><span class="p">,</span> <span class="kt">Any</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="singleton-types">Singleton Types</h3>
+<ul>
+<li>全ての型は,Type{T&lt;:Top}と呼ばれるパラメータ型のインスタンス</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#Type{T&lt;:Top}</span>
+<span class="c">#Top = Union(Any, Undef)</span>
+<span class="c">#唯一のインスタンスがオブジェクトTである抽象パラメタ型。</span>
+<span class="nb">isa</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span> <span class="n">Type</span><span class="p">{</span><span class="kt">Float64</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[21]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+true
 </pre>
 </div>
 
@@ -6000,20 +6575,19 @@ In&nbsp;[83]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="conversion-and-promotion">Conversion and Promotion</h2>
-<hr>
-<p>juliaでは上位型への暗黙的な型キャストは行いません。<br>なので、型が適用できなかった場合に明示的に型変換を行う関数promoteとそれに関連したconvert関数が必要になってきます。</p>
-<hr>
+<hr />
+<p>juliaでは上位型への暗黙的な型キャストは行いません。<br />なので、型が適用できなかった場合に明示的に型変換を行う関数promoteとそれに関連したconvert関数が必要になってきます。 ____</p>
 <ul>
-<li>Promotion   上位の型への変換 -&gt;<ul>
+<li>Promotion 上位の型への変換 -&gt;
+<ul>
 <li>promote_rule関数によって型の変換関係が定義されています。</li>
 <li>promote_type関数がpromote_ruleに基づく型の変換を行っています。</li>
-</ul>
-</li>
-<li>Conversion  <ul>
+</ul></li>
+<li>Conversion
+<ul>
 <li>convert 関数 promote 関数が型変換を行うときに用いる関数。</li>
 <li>型変換の定義を行う場合は convert 関数に定義してください。</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -6209,7 +6783,7 @@ Float32
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="http://docs.julialang.org/en/release-0.3/manual/conversion-and-promotion/#case-study-rational-conversions">CaseStudy</a>もう少しに詳しく書かれています。</p>
-<p>さらに詳しく知りたい場合は、以下の資料がオススメです。<br>juliaのコア開発者の@StefanKarpinskiさんの書かれた多重ディスパッチの<a href="http://nbviewer.ipython.org/gist/StefanKarpinski/b8fe9dbb36c1427b9f22">資料</a>は素晴らしいです。<br>juliaの多重ディスパッチの日本語で書かれた資料は<a href="http://dsng.hatenablog.com/entry/2014/01/27/173154">ここ</a>です。<br>上記を参考資料にしているのでわかりやすいです。</p>
+<p>さらに詳しく知りたい場合は、以下の資料がオススメです。<br />juliaのコア開発者の@StefanKarpinskiさんの書かれた多重ディスパッチの<a href="http://nbviewer.ipython.org/gist/StefanKarpinski/b8fe9dbb36c1427b9f22">資料</a>は素晴らしいです。<br />juliaの多重ディスパッチの日本語で書かれた資料は<a href="http://dsng.hatenablog.com/entry/2014/01/27/173154">ここ</a>です。<br />上記を参考資料にしているのでわかりやすいです。</p>
 </div>
 </div>
 </div></section><section>
@@ -6219,8 +6793,8 @@ Float32
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">実際の処理の流れ</h3>
-<ol>
+<h3 id="実際の処理の流れ">実際の処理の流れ</h3>
+<ol style="list-style-type: decimal">
 <li>型Tと型Sの間で何かしら計算出来ない場合はfallbackメソッドが呼ばれる</li>
 <li>fallbackメソッドでpromote関数が呼ばれる</li>
 <li>promote関数ではconvert(promote_type(T,S),x)が呼ばれる</li>
@@ -6238,7 +6812,7 @@ Float32
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-">外部ライブラリ</h2>
+<h2 id="外部ライブラリ">外部ライブラリ</h2>
 </div>
 </div>
 </div></section><section>
